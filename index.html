@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>finaltutorialhousingcrisis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>finaltutorialhousingcrisis (4)</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7510,16 +7510,40 @@ a.anchor-link {
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
 <main>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89c39af6-7a5c-4c95-be47-4891d93c464e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6577480d-a629-43da-b627-acc159735ca3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Analyzing-the-Recent-Housing-Crisis-using-FHFA-House-Price-Index-Data">Analyzing the Recent Housing Crisis using FHFA House Price Index Data<a class="anchor-link" href="#Analyzing-the-Recent-Housing-Crisis-using-FHFA-House-Price-Index-Data">¶</a></h1><p>Ukeje Okoronkwo and Inigo Capinpin</p>
+<h1 id="Analyzing-the-Housing-Crisis-using-FHFA-House-Price-Index-Data">Analyzing the Housing Crisis using FHFA House Price Index Data<a class="anchor-link" href="#Analyzing-the-Housing-Crisis-using-FHFA-House-Price-Index-Data">¶</a></h1><p>Ukeje Okoronkwo and Inigo Capinpin</p>
+<p>(Important note: there is a bug when writing the ipynb file text in these paragraphs. it is creating spelling errors for some reason and there is no fix for it no matter how much we try to fix it. If the text is not sensible, please check the ipynb file itself associated with the project as the text there is correct).</p>
 <h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">¶</a></h2><p>Welcome to this data science tutorial where we will delve into the recent housing crisis in the United States through the lens of data analysis. In this project, we will utilize the Federal Housing Finance Agency (FHFA) House Price Index dataset to examine the impact of the housing crisis on the U.S. housing market and explore the factors that contributed to this economic down turn.</p>
-<h2 id="Motivation">Motivation<a class="anchor-link" href="#Motivation">¶</a></h2><p>The housing crisis of the late 2000s had a profound impact on the U.S. economy, causing widespread foreclosures, a decline in hom increased unemploymente values, and a ripple effect on various sectors. Understanding the dynamics of the housing market during this period is crucial for policymakers, economists, and individuals seeking to make informed decisions about housing investments and policies.</p>
-<h2 id="Dataset">Dataset<a class="anchor-link" href="#Dataset">¶</a></h2><p>For this analysis, we will be using the FHFA House Price Index dataset, which provides a comprehensive measure of house price changes across the United States. The dataset includes quarterly and monthly house price indexes at the national, state, and metropolitan levels, allowing us to examine the housing market at different granularities.</p>
+<h2 id="Motiv">Motiv<a class="anchor-link" href="#Motiv">¶</a></h2><p>The late 2000s housing crisis had a devastating impact on the U.S. economy, leading to widespread foreclosures, plummeting home values, and a ripple effect across various sectors. This crisis exposed the vulnerabilities and interconnectedness of the housing mark , and the broader economic landscape. Understanding the intricate dynamics of the housing market during this turbulent period is crorial f , etnomis , and individuals seeking to make informed decisions about housing investments and policies. By analyzing the factors that contributed to the crisis, policymakers can develop more robust regulations and safeguards to prevent similar events from occurring. Investors and homebuyers can gain valuable lessons on assessing risks and navigating market fluctuations. Furthermore, studying the patterns, trends, and indicators that emerged during the crisis can aid in the development of forecasting models and early warning systems, enabling proactive measures to mitigate the impacts of futuis pcrisee.olicies.</p>
+<p>For this analysis, we will be utilizing the FHFA House Price Indexadataset, e resource that provides valuable insights into the dynamics of the U.S. housing market. This dataset offers a measure of house price changes across various geographic regions, enabling us to examine the intricate patterns and trends within the housing market at different levels of granularity.</p>
+<p>The dataset consists of several columns, each representing a specific region or index. Let's delve into the meaning of these terms:</p>
+<ol>
+<li><p><strong>DV_ENC</strong>: This column represents the house price index for the East North Central region, comprising states such as Illinois, Indiana, Michigan, Ohio, and Wisconsin.</p>
+</li>
+<li><p><strong>DV_ESC</strong>: The East South Central region is represented by this column, encompassing states like Alabama, Kentucky, Mississippi, and Tennessee.</p>
+</li>
+<li><p><strong>DV_MA</strong>: This column reflects the house price index for the Middle Atlantic region, which includes states such as New Jersey, New York, and Pennsylvania.</p>
+</li>
+<li><p><strong>DV_MT</strong>: The Mountain region is represented by this column, covering states like Arizona, Colorado, Idaho, Montana, Nevada, New Mexico, Utah, and Wyoming.</p>
+</li>
+<li><p><strong>DV_NE</strong>: This column represents the house price index for the New England region, comprising states like Connecticut, Maine, Massachusetts, New Hampshire, Rhode Island, and Vermont.</p>
+</li>
+<li><p><strong>DV_PAC</strong>: The Pacific region is represented by this column, encompassing states like Alaska, California, Hawaii, Oregon, and Washington.</p>
+</li>
+<li><p><strong>DV_SA</strong>: This column reflects the house price index for the South Atlantic region, which includes states such as Delaware, Florida, Georgia, Maryland, North Carolina, South Carolina, Virginia, and West Virginia.</p>
+</li>
+<li><p><strong>DV_WNC</strong>: The West North Central region is represented by this column, covering states like Iowa, Kansas, Minnesota, Missouri, Nebraska, North Dakota, and South Dakota.</p>
+</li>
+<li><p><strong>DV_WSC</strong>: This column represents the house price index for the West South Central region, comprising states like Arkansas, Louisiana, Oklahoma, and Texas.</p>
+</li>
+<li><p><strong>USA</strong>: This column represents the national house price index for the entire United States, providing an overall perspective on the housing market dynang crisis in the late 2000s.granularities.</p>
+</li>
+</ol>
 <h2 id="Data-Collection">Data Collection<a class="anchor-link" href="#Data-Collection">¶</a></h2><p>To begin our analysis, we need to collect the necessary data. We will be using the FHFA House Price Index dataset, which can be downloaded from the FHFA website. The dataset is available in CSV format, making it easy to import and work with in Python.</p>
 <p>Here are the steps to collect the data:</p>
 <ol>
@@ -7547,6 +7571,13 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">statsmodels.tsa.stattools</span> <span class="kn">import</span> <span class="n">adfuller</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Ridge</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_selection</span> <span class="kn">import</span> <span class="n">RFE</span>
+<span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="kn">import</span> <span class="n">KMeans</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="kn">import</span> <span class="n">PCA</span>
 </pre></div>
 </div>
 </div>
@@ -7624,7 +7655,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -7636,14 +7667,70 @@ a.anchor-link {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>   region  year  quarter  price_index
-0  DV_ENC  1975        2        62.65
-1  DV_ENC  1975        3        63.56
-2  DV_ENC  1975        4        65.01
-3  DV_ENC  1976        1        65.07
-4  DV_ENC  1976        2        66.96
-</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>region</th>
+<th>year</th>
+<th>quarter</th>
+<th>price_index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>DV_ENC</td>
+<td>1975</td>
+<td>2</td>
+<td>62.65</td>
+</tr>
+<tr>
+<th>1</th>
+<td>DV_ENC</td>
+<td>1975</td>
+<td>3</td>
+<td>63.56</td>
+</tr>
+<tr>
+<th>2</th>
+<td>DV_ENC</td>
+<td>1975</td>
+<td>4</td>
+<td>65.01</td>
+</tr>
+<tr>
+<th>3</th>
+<td>DV_ENC</td>
+<td>1976</td>
+<td>1</td>
+<td>65.07</td>
+</tr>
+<tr>
+<th>4</th>
+<td>DV_ENC</td>
+<td>1976</td>
+<td>2</td>
+<td>66.96</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -7667,7 +7754,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7680,8 +7767,7 @@ a.anchor-link {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>(1959, 4)
-</pre>
+<pre>(1959, 4)</pre>
 </div>
 </div>
 </div>
@@ -7705,7 +7791,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7722,8 +7808,7 @@ a.anchor-link {
 year             int64
 quarter          int64
 price_index    float64
-dtype: object
-</pre>
+dtype: object</pre>
 </div>
 </div>
 </div>
@@ -7747,7 +7832,7 @@ dtype: object
 <div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -7764,8 +7849,7 @@ dtype: object
 year           0
 quarter        0
 price_index    0
-dtype: int64
-</pre>
+dtype: int64</pre>
 </div>
 </div>
 </div>
@@ -7853,7 +7937,7 @@ dtype: int64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\uk273\AppData\Local\Temp\ipykernel_19488\3016304957.py:1: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+<pre>C:\Users\uk273\AppData\Local\Temp\ipykernel_6908\3016304957.py:1: UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
   data['date'] = pd.to_datetime(data['year'].astype(str) + 'Q' + data['quarter'].astype(str))
 </pre>
 </div>
@@ -7917,7 +8001,7 @@ dtype: int64
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>C:\Users\uk273\AppData\Local\Temp\ipykernel_19488\2471521693.py:1: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
+<pre>C:\Users\uk273\AppData\Local\Temp\ipykernel_6908\2471521693.py:1: FutureWarning: 'Q' is deprecated and will be removed in a future version, please use 'QE' instead.
   data = data.groupby(['region', pd.Grouper(key='date', freq='Q')])['price_index'].mean().reset_index()
 </pre>
 </div>
@@ -7944,7 +8028,7 @@ dtype: int64
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">'region'</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">'price_index'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -7956,37 +8040,198 @@ dtype: int64
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>region      DV_ENC  DV_ESC   DV_MA   DV_MT   DV_NE  DV_PAC   DV_SA  DV_WNC  \
-date                                                                         
-1975-03-31     NaN   69.25   71.81   53.53   61.63   43.68   65.17   60.99   
-1975-06-30   62.65   68.72   69.22   51.92   64.17   44.46   70.02   63.53   
-1975-09-30   63.56   69.35   71.76   55.76   62.15   46.34   68.22   62.11   
-1975-12-31   65.01   70.12   72.37   55.41   63.68   47.10   68.52   63.37   
-1976-03-31   65.07   71.83   70.22   57.05   65.23   49.27   67.93   65.64   
-...            ...     ...     ...     ...     ...     ...     ...     ...   
-2022-12-31  459.74  513.40  761.45  704.13  863.37  908.89  657.19  476.88   
-2023-03-31  464.14  517.79  765.00  699.92  876.57  906.72  662.78  481.74   
-2023-06-30  485.97  529.83  793.31  715.17  914.60  930.76  681.36  501.51   
-2023-09-30  496.77  536.36  816.73  727.52  940.32  942.52  696.41  508.70   
-2023-12-31  495.94  541.94  820.63  725.29  938.59  938.23  699.75  505.60   
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-region      DV_WSC     USA  
-date                        
-1975-03-31   55.26   59.88  
-1975-06-30   57.07   60.76  
-1975-09-30   55.69   61.17  
-1975-12-31   58.08   62.22  
-1976-03-31   58.58   62.85  
-...            ...     ...  
-2022-12-31  453.28  622.34  
-2023-03-31  454.61  625.68  
-2023-06-30  461.88  645.14  
-2023-09-30  467.98  657.42  
-2023-12-31  467.56  657.67  
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-[196 rows x 10 columns]
-</pre>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>region</th>
+<th>DV_ENC</th>
+<th>DV_ESC</th>
+<th>DV_MA</th>
+<th>DV_MT</th>
+<th>DV_NE</th>
+<th>DV_PAC</th>
+<th>DV_SA</th>
+<th>DV_WNC</th>
+<th>DV_WSC</th>
+<th>USA</th>
+</tr>
+<tr>
+<th>date</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>1975-03-31</th>
+<td>NaN</td>
+<td>69.25</td>
+<td>71.81</td>
+<td>53.53</td>
+<td>61.63</td>
+<td>43.68</td>
+<td>65.17</td>
+<td>60.99</td>
+<td>55.26</td>
+<td>59.88</td>
+</tr>
+<tr>
+<th>1975-06-30</th>
+<td>62.65</td>
+<td>68.72</td>
+<td>69.22</td>
+<td>51.92</td>
+<td>64.17</td>
+<td>44.46</td>
+<td>70.02</td>
+<td>63.53</td>
+<td>57.07</td>
+<td>60.76</td>
+</tr>
+<tr>
+<th>1975-09-30</th>
+<td>63.56</td>
+<td>69.35</td>
+<td>71.76</td>
+<td>55.76</td>
+<td>62.15</td>
+<td>46.34</td>
+<td>68.22</td>
+<td>62.11</td>
+<td>55.69</td>
+<td>61.17</td>
+</tr>
+<tr>
+<th>1975-12-31</th>
+<td>65.01</td>
+<td>70.12</td>
+<td>72.37</td>
+<td>55.41</td>
+<td>63.68</td>
+<td>47.10</td>
+<td>68.52</td>
+<td>63.37</td>
+<td>58.08</td>
+<td>62.22</td>
+</tr>
+<tr>
+<th>1976-03-31</th>
+<td>65.07</td>
+<td>71.83</td>
+<td>70.22</td>
+<td>57.05</td>
+<td>65.23</td>
+<td>49.27</td>
+<td>67.93</td>
+<td>65.64</td>
+<td>58.58</td>
+<td>62.85</td>
+</tr>
+<tr>
+<th>...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<th>2022-12-31</th>
+<td>459.74</td>
+<td>513.40</td>
+<td>761.45</td>
+<td>704.13</td>
+<td>863.37</td>
+<td>908.89</td>
+<td>657.19</td>
+<td>476.88</td>
+<td>453.28</td>
+<td>622.34</td>
+</tr>
+<tr>
+<th>2023-03-31</th>
+<td>464.14</td>
+<td>517.79</td>
+<td>765.00</td>
+<td>699.92</td>
+<td>876.57</td>
+<td>906.72</td>
+<td>662.78</td>
+<td>481.74</td>
+<td>454.61</td>
+<td>625.68</td>
+</tr>
+<tr>
+<th>2023-06-30</th>
+<td>485.97</td>
+<td>529.83</td>
+<td>793.31</td>
+<td>715.17</td>
+<td>914.60</td>
+<td>930.76</td>
+<td>681.36</td>
+<td>501.51</td>
+<td>461.88</td>
+<td>645.14</td>
+</tr>
+<tr>
+<th>2023-09-30</th>
+<td>496.77</td>
+<td>536.36</td>
+<td>816.73</td>
+<td>727.52</td>
+<td>940.32</td>
+<td>942.52</td>
+<td>696.41</td>
+<td>508.70</td>
+<td>467.98</td>
+<td>657.42</td>
+</tr>
+<tr>
+<th>2023-12-31</th>
+<td>495.94</td>
+<td>541.94</td>
+<td>820.63</td>
+<td>725.29</td>
+<td>938.59</td>
+<td>938.23</td>
+<td>699.75</td>
+<td>505.60</td>
+<td>467.56</td>
+<td>657.67</td>
+</tr>
+</tbody>
+</table>
+<p>196 rows × 10 columns</p>
+</div>
 </div>
 </div>
 </div>
@@ -8021,7 +8266,7 @@ date
 <div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -8033,27 +8278,145 @@ date
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>region      DV_ENC      DV_ESC       DV_MA       DV_MT       DV_NE  \
-count   195.000000  196.000000  196.000000  196.000000  196.000000   
-mean    219.681487  219.241224  335.169898  250.936020  371.717296   
-std     100.537460  106.716166  185.924276  157.216264  211.061767   
-min      62.650000   68.720000   69.220000   51.920000   61.630000   
-25%     127.235000  135.357500  204.425000  125.122500  245.595000   
-50%     227.260000  206.820000  273.040000  212.110000  303.380000   
-75%     287.140000  286.210000  482.795000  340.112500  531.780000   
-max     496.770000  541.940000  820.630000  727.520000  940.320000   
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-region      DV_PAC       DV_SA      DV_WNC      DV_WSC         USA  
-count   196.000000  196.000000  196.000000  196.000000  196.000000  
-mean    338.376684  257.697347  214.737194  184.511224  255.886786  
-std     229.026508  144.077506  105.786338   92.618924  140.193727  
-min      43.680000   65.170000   60.990000   55.260000   59.880000  
-25%     139.877500  145.750000  125.722500  119.022500  144.125000  
-50%     249.855000  216.460000  198.340000  154.760000  221.990000  
-75%     493.057500  352.350000  286.130000  227.222500  349.720000  
-max     942.520000  699.750000  508.700000  467.980000  657.670000  
-</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>region</th>
+<th>DV_ENC</th>
+<th>DV_ESC</th>
+<th>DV_MA</th>
+<th>DV_MT</th>
+<th>DV_NE</th>
+<th>DV_PAC</th>
+<th>DV_SA</th>
+<th>DV_WNC</th>
+<th>DV_WSC</th>
+<th>USA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>count</th>
+<td>195.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+<td>196.000000</td>
+</tr>
+<tr>
+<th>mean</th>
+<td>219.681487</td>
+<td>219.241224</td>
+<td>335.169898</td>
+<td>250.936020</td>
+<td>371.717296</td>
+<td>338.376684</td>
+<td>257.697347</td>
+<td>214.737194</td>
+<td>184.511224</td>
+<td>255.886786</td>
+</tr>
+<tr>
+<th>std</th>
+<td>100.537460</td>
+<td>106.716166</td>
+<td>185.924276</td>
+<td>157.216264</td>
+<td>211.061767</td>
+<td>229.026508</td>
+<td>144.077506</td>
+<td>105.786338</td>
+<td>92.618924</td>
+<td>140.193727</td>
+</tr>
+<tr>
+<th>min</th>
+<td>62.650000</td>
+<td>68.720000</td>
+<td>69.220000</td>
+<td>51.920000</td>
+<td>61.630000</td>
+<td>43.680000</td>
+<td>65.170000</td>
+<td>60.990000</td>
+<td>55.260000</td>
+<td>59.880000</td>
+</tr>
+<tr>
+<th>25%</th>
+<td>127.235000</td>
+<td>135.357500</td>
+<td>204.425000</td>
+<td>125.122500</td>
+<td>245.595000</td>
+<td>139.877500</td>
+<td>145.750000</td>
+<td>125.722500</td>
+<td>119.022500</td>
+<td>144.125000</td>
+</tr>
+<tr>
+<th>50%</th>
+<td>227.260000</td>
+<td>206.820000</td>
+<td>273.040000</td>
+<td>212.110000</td>
+<td>303.380000</td>
+<td>249.855000</td>
+<td>216.460000</td>
+<td>198.340000</td>
+<td>154.760000</td>
+<td>221.990000</td>
+</tr>
+<tr>
+<th>75%</th>
+<td>287.140000</td>
+<td>286.210000</td>
+<td>482.795000</td>
+<td>340.112500</td>
+<td>531.780000</td>
+<td>493.057500</td>
+<td>352.350000</td>
+<td>286.130000</td>
+<td>227.222500</td>
+<td>349.720000</td>
+</tr>
+<tr>
+<th>max</th>
+<td>496.770000</td>
+<td>541.940000</td>
+<td>820.630000</td>
+<td>727.520000</td>
+<td>940.320000</td>
+<td>942.520000</td>
+<td>699.750000</td>
+<td>508.700000</td>
+<td>467.980000</td>
+<td>657.670000</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -8177,7 +8540,7 @@ max     942.520000  699.750000  508.700000  467.980000  657.670000
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37439385-3c5a-4100-ba87-d29e1a3cd479">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6c60dde6-9b74-480b-a0ae-e01e638d9631">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8269,7 +8632,7 @@ max     942.520000  699.750000  508.700000  467.980000  657.670000
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=43e985f9-1692-4a4f-a739-fdda01d9528f">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a7403f60-c670-4ee1-bb96-09ee4d3f2639">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8299,7 +8662,7 @@ max     942.520000  699.750000  508.700000  467.980000  657.670000
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">correlation_matrix</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8311,33 +8674,184 @@ max     942.520000  699.750000  508.700000  467.980000  657.670000
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>region    DV_ENC    DV_ESC     DV_MA     DV_MT     DV_NE    DV_PAC     DV_SA  \
-region                                                                         
-DV_ENC  1.000000  0.985335  0.979600  0.967669  0.981605  0.972274  0.981652   
-DV_ESC  0.985335  1.000000  0.984145  0.988050  0.981545  0.981538  0.992966   
-DV_MA   0.979600  0.984145  1.000000  0.963937  0.997092  0.981883  0.986338   
-DV_MT   0.967669  0.988050  0.963937  1.000000  0.963433  0.988115  0.992464   
-DV_NE   0.981605  0.981545  0.997092  0.963433  1.000000  0.980715  0.986436   
-DV_PAC  0.972274  0.981538  0.981883  0.988115  0.980715  1.000000  0.993273   
-DV_SA   0.981652  0.992966  0.986338  0.992464  0.986436  0.993273  1.000000   
-DV_WNC  0.989318  0.996749  0.988094  0.985065  0.986407  0.986675  0.992128   
-DV_WSC  0.946728  0.983760  0.953571  0.987995  0.950220  0.971929  0.977065   
-USA     0.986736  0.996202  0.989853  0.990809  0.988988  0.993687  0.998068   
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-region    DV_WNC    DV_WSC       USA  
-region                                
-DV_ENC  0.989318  0.946728  0.986736  
-DV_ESC  0.996749  0.983760  0.996202  
-DV_MA   0.988094  0.953571  0.989853  
-DV_MT   0.985065  0.987995  0.990809  
-DV_NE   0.986407  0.950220  0.988988  
-DV_PAC  0.986675  0.971929  0.993687  
-DV_SA   0.992128  0.977065  0.998068  
-DV_WNC  1.000000  0.979120  0.997351  
-DV_WSC  0.979120  1.000000  0.980118  
-USA     0.997351  0.980118  1.000000  
-</pre>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th>region</th>
+<th>DV_ENC</th>
+<th>DV_ESC</th>
+<th>DV_MA</th>
+<th>DV_MT</th>
+<th>DV_NE</th>
+<th>DV_PAC</th>
+<th>DV_SA</th>
+<th>DV_WNC</th>
+<th>DV_WSC</th>
+<th>USA</th>
+</tr>
+<tr>
+<th>region</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>DV_ENC</th>
+<td>1.000000</td>
+<td>0.985335</td>
+<td>0.979600</td>
+<td>0.967669</td>
+<td>0.981605</td>
+<td>0.972274</td>
+<td>0.981652</td>
+<td>0.989318</td>
+<td>0.946728</td>
+<td>0.986736</td>
+</tr>
+<tr>
+<th>DV_ESC</th>
+<td>0.985335</td>
+<td>1.000000</td>
+<td>0.984145</td>
+<td>0.988050</td>
+<td>0.981545</td>
+<td>0.981538</td>
+<td>0.992966</td>
+<td>0.996749</td>
+<td>0.983760</td>
+<td>0.996202</td>
+</tr>
+<tr>
+<th>DV_MA</th>
+<td>0.979600</td>
+<td>0.984145</td>
+<td>1.000000</td>
+<td>0.963937</td>
+<td>0.997092</td>
+<td>0.981883</td>
+<td>0.986338</td>
+<td>0.988094</td>
+<td>0.953571</td>
+<td>0.989853</td>
+</tr>
+<tr>
+<th>DV_MT</th>
+<td>0.967669</td>
+<td>0.988050</td>
+<td>0.963937</td>
+<td>1.000000</td>
+<td>0.963433</td>
+<td>0.988115</td>
+<td>0.992464</td>
+<td>0.985065</td>
+<td>0.987995</td>
+<td>0.990809</td>
+</tr>
+<tr>
+<th>DV_NE</th>
+<td>0.981605</td>
+<td>0.981545</td>
+<td>0.997092</td>
+<td>0.963433</td>
+<td>1.000000</td>
+<td>0.980715</td>
+<td>0.986436</td>
+<td>0.986407</td>
+<td>0.950220</td>
+<td>0.988988</td>
+</tr>
+<tr>
+<th>DV_PAC</th>
+<td>0.972274</td>
+<td>0.981538</td>
+<td>0.981883</td>
+<td>0.988115</td>
+<td>0.980715</td>
+<td>1.000000</td>
+<td>0.993273</td>
+<td>0.986675</td>
+<td>0.971929</td>
+<td>0.993687</td>
+</tr>
+<tr>
+<th>DV_SA</th>
+<td>0.981652</td>
+<td>0.992966</td>
+<td>0.986338</td>
+<td>0.992464</td>
+<td>0.986436</td>
+<td>0.993273</td>
+<td>1.000000</td>
+<td>0.992128</td>
+<td>0.977065</td>
+<td>0.998068</td>
+</tr>
+<tr>
+<th>DV_WNC</th>
+<td>0.989318</td>
+<td>0.996749</td>
+<td>0.988094</td>
+<td>0.985065</td>
+<td>0.986407</td>
+<td>0.986675</td>
+<td>0.992128</td>
+<td>1.000000</td>
+<td>0.979120</td>
+<td>0.997351</td>
+</tr>
+<tr>
+<th>DV_WSC</th>
+<td>0.946728</td>
+<td>0.983760</td>
+<td>0.953571</td>
+<td>0.987995</td>
+<td>0.950220</td>
+<td>0.971929</td>
+<td>0.977065</td>
+<td>0.979120</td>
+<td>1.000000</td>
+<td>0.980118</td>
+</tr>
+<tr>
+<th>USA</th>
+<td>0.986736</td>
+<td>0.996202</td>
+<td>0.989853</td>
+<td>0.990809</td>
+<td>0.988988</td>
+<td>0.993687</td>
+<td>0.998068</td>
+<td>0.997351</td>
+<td>0.980118</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </div>
 </div>
@@ -8382,7 +8896,30 @@ USA     0.997351  0.980118  1.000000
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9ffe7210-01a9-4574-95d3-97f984eda01a">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ac5bfff0-b216-42fb-92b1-668f5a0d2a3f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Based on the correlation matrix displayed, we can make the following observations and analysis:</p>
+<ul>
+<li><p>The matrix shows very high positive correlations, mostly above 0.95, between all pairs of regions, including the national index ('USA'). This indicates that the price indexes across different regions tend to move in the same direction, suggesting a strong relationship and interdependence between regional real estate markets.</p>
+</li>
+<li><p>The highest correlations of 1.0 are observed between certain pairs of regions, such as 'DV_ENC' and itself, 'DV_ESC' and 'DV_WNC', and 'USA' with 'DV_SA' and 'DV_WNC'. This suggests that these pairs of regions have nearly identical price index movements over the time period analyzed.</p>
+</li>
+<li><p>While most correlations are very high, the relatively lowest correlations are observed between 'DV_WSC' and other regions, ranging from 0.95 to 0.98. This could indicate that the real estate market dynamics in the 'DV_WSC' region may differ slightly from other regions, although the correlations are still quite high.</p>
+</li>
+<li><p>The overall pattern of high positive correlations suggests a strong integration and synchronization of real estate markets across different regions within the broader national market. This could be due to factors like economic conditions, interest rates, population movements, or investor behavior affecting the entire housing market in a similar manner.</p>
+</li>
+<li><p>From an investment perspective, the high correlations imply that there may be limited opportunities for diversification within the real estate market by investing in different regions, as the price movements are highly correlated. Diversification may need to be sought by investing in other asset classes or alternative investments with lower correlations to real estate.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bb25c5ed-b885-42e8-af8f-b763a4a23fb8">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8479,7 +9016,35 @@ USA     0.997351  0.980118  1.000000
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f1588cfc-0e6e-4f39-ac95-c36cf47c51d4">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5402049d-5afc-44cc-baf6-3f03ca0eba7f">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><p>The graph displays a cyclical pattern in the price indices, with periods of growth followed by periods of decline or stagnation. This cyclical behavior is expected and aligns with the cyclical nature of real estate markets and economic conditions.</p>
+</li>
+<li><p>Impact of Recessions</p>
+</li>
+</ul>
+<ol>
+<li>1990 Recession: Around the time of the 1990 recession (indicated by the gray vertical line), there is a notable downturn in the percentage change of price indices across most regions. This suggests that the 1990 recession had a significant impact on real estate values, leading to a period of declining or stagnant prices.</li>
+<li>2008 Financial Crisis: The red vertical line marks the 2008 financial crisis, and it is evident that this event had a more pronounced and prolonged impact on the real estate market. Following the crisis, there is a sharp and extended decline in the percentage change of price indices, indicating a severe downturn in real estate values across all regions.</li>
+</ol>
+<ul>
+<li><p>While the overall patterns are similar, there are noticeable regional variations in the magnitude and timing of price changes. For example, some regions like DV_PAC (likely the Pacific region) experienced steeper declines during the 2008 crisis compared to others.</p>
+</li>
+<li><p>After each major downturn, the graph shows a period of recovery, where the percentage change in price indices becomes positive again, indicating a rebound in real estate values. However, the pace and strength of recovery vary across regions.</p>
+</li>
+<li><p>In the most recent years, the graph shows a sustained period of positive price changes across all regions, suggesting a strong real estate market with rising values. However, it's important to note that this data may not capture the most recent market conditions or potential changes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f4a04cd8-1f45-49ad-9c5d-6f2fcfb33416">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8490,13 +9055,13 @@ USA     0.997351  0.980118  1.000000
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=690c63a7-c0a8-47b9-9032-f6c80df2f328">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=05f94304-35f0-4f33-ae5b-49592519bbc4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Test if there is a significant difference in price indices between two regions</p>
+<p>Test if there is a significant difference in price indices between two regions. In this example we are seeing the difference between DV_WNC and DV_ESC.</p>
 </div>
 </div>
 </div>
@@ -8531,6 +9096,18 @@ USA     0.997351  0.980118  1.000000
 </div>
 </div>
 </div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e449d0e8-8120-4bd6-9692-0ed4a1e2fead">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Given the p-value of 0.6749800358768302, which is greater than the commonly used significance levels (e.g., 0.05), we fail to reject the null hypothesis. This means that based on the data and the chosen significance level, there is insufficient evidence to conclude that the mean price indices of the 'DV_WNC' and 'DV_ESC' regions are significantly different.
+In other words, the high p-value suggests that the observed difference in means between the two regions could be due to random chance or sampling variability, rather than a statistically significant difference in the underlying populations.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6f384b17-5a4e-447c-9f7c-454bfa5a4041">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8546,10 +9123,10 @@ USA     0.997351  0.980118  1.000000
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'int64'</span><span class="p">)</span> <span class="o">/</span> <span class="mi">10</span><span class="o">**</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>  <span class="c1"># Convert datetime index to numeric values using timestamp</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'DV_ESC'</span><span class="p">,</span> <span class="s1">'DV_MA'</span><span class="p">,</span> <span class="s1">'DV_PAC'</span><span class="p">,</span> <span class="s1">'DV_NE'</span><span class="p">,</span> <span class="s1">'DV_WNC'</span><span class="p">]]</span>  <span class="c1"># Include relevant regional indexes and other features</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'USA'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># Using the USA price index as the target variable</span>
 
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -8572,9 +9149,195 @@ USA     0.997351  0.980118  1.000000
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Mean Squared Error: 1083.4124802599272
+<pre>Mean Squared Error: 3.0890735450944837
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=130ba45b-eb3b-49f8-94b1-b34ae7f81b96">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The relatively low MSE value of 3.0890735450944837 indicates that the regional price indexes have substantial predictive power in estimating the national price index. This highlights the importance of monitoring the regional market data to understand and forecast national real estate trends accurately.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=37238608-cf77-47d8-ad12-099c081d18d6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This is another way of doing a linear regression through Principle Component Analysis (PCA) which is very helpful for noise reduction and interpreting your results:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a46c61dd-de75-4eb0-a7c9-78cda133a7fc">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'DV_ESC'</span><span class="p">,</span> <span class="s1">'DV_MA'</span><span class="p">,</span> <span class="s1">'DV_PAC'</span><span class="p">,</span> <span class="s1">'DV_SA'</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'USA'</span><span class="p">]</span>
+
+<span class="n">pca</span> <span class="o">=</span> <span class="n">PCA</span><span class="p">()</span>
+<span class="n">X_pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+<span class="n">model_pcr</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="c1"># Print the coefficients</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Coefficients:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model_pcr</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+
+<span class="c1"># Print the intercept</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Intercept:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model_pcr</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+
+<span class="c1"># Print the R-squared value</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"R-squared:"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model_pcr</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">X_pca</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Coefficients:
+[ 0.40746002  0.01482922  0.39633936 -0.27739492]
+Intercept:
+255.8867857142857
+R-squared:
+0.9996755191338285
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=add35f48-0817-4c63-8a75-8d36c6d2ed13">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'DV_WNC'</span><span class="p">,</span> <span class="s1">'DV_ESC'</span><span class="p">,</span> <span class="s1">'DV_NE'</span><span class="p">,</span> <span class="s1">'DV_PAC'</span><span class="p">]]</span> <span class="c1"># Select relevant regional indexes as features</span>
+<span class="n">kmeans</span> <span class="o">=</span> <span class="n">KMeans</span><span class="p">(</span><span class="n">n_clusters</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">kmeans</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">labels_</span>
+<span class="n">display</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">kmeans</span><span class="o">.</span><span class="n">cluster_centers_</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Cluster Centroids:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">centroid</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">centroids</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Cluster </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">centroid</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+       4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+       4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+       1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+       2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3])</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Cluster Centroids:
+Cluster 0: [319.49527778 316.78111111 583.35722222 602.64555556]
+Cluster 1: [158.56508197 168.03721311 272.15180328 210.1647541 ]
+Cluster 2: [267.80116279 267.19023256 489.08744186 414.17697674]
+Cluster 3: [467.02636364 491.75454545 846.74727273 891.74727273]
+Cluster 4: [ 94.69888889  98.18688889 109.09977778  93.06022222]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=456ef3b7-1623-47d5-9ad9-232699632500">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>the characteristics of the clusters based on the centroids are:
+Cluster 0: This cluster has relatively low mean price indexes across all four regions, suggesting that it represents areas with lower real estate values or potentially an earlier time period in the data.
+Cluster 1: The centroids for this cluster show moderately high mean price indexes, with the highest values observed for the 'DV_PAC' and 'DV_NE' regions.
+Cluster 2: This cluster exhibits the highest mean price indexes among all clusters, particularly for the 'DV_NE' and 'DV_PAC' regions, indicating areas with high real estate values or potentially a more recent time period.
+Cluster 3: The centroids for this cluster show a mixed pattern, with relatively high mean price indexes for 'DV_ESC' and 'DV_NE', but lower values for 'DV_PAC' and 'DV_WNC'.
+Cluster 4: This cluster has moderate mean price indexes across all regions, with values falling between the extremes of Clusters 0 and 2.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7d569b49-e235-4767-993c-3737a66091a2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">'DV_WNC'</span><span class="p">,</span> <span class="s1">'DV_ESC'</span><span class="p">,</span> <span class="s1">'DV_NE'</span><span class="p">,</span> <span class="s1">'DV_PAC'</span><span class="p">,</span> <span class="s1">'DV_MA'</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">'USA'</span><span class="p">]</span>
+<span class="n">estimator</span> <span class="o">=</span> <span class="n">Ridge</span><span class="p">()</span>
+<span class="n">selector</span> <span class="o">=</span> <span class="n">RFE</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">n_features_to_select</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">selector</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">selected_features</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">selector</span><span class="o">.</span><span class="n">support_</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">selected_features</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Index(['DV_WNC', 'DV_ESC', 'DV_NE', 'DV_PAC', 'DV_MA'], dtype='object', name='region')</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=60cf87dc-c644-46d3-8605-b610bde6b109">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The output shows that all five regional price indexes ('DV_WNC', 'DV_ESC', 'DV_NE', 'DV_PAC', and 'DV_MA') were selected by the RFE process as the most important features for predicting our target variable 'USA'.</p>
 </div>
 </div>
 </div>
@@ -8596,20 +9359,6 @@ USA     0.997351  0.980118  1.000000
 <p><a href="https://www.investopedia.com/terms/h/house-price-index-hpi.asp">https://www.investopedia.com/terms/h/house-price-index-hpi.asp</a> (Housing price index definition with further detail)</p>
 <p><a href="https://en.wikipedia.org/wiki/Subprime_mortgage_crisis">https://en.wikipedia.org/wiki/Subprime_mortgage_crisis</a> (The 2008 housing market recession)</p>
 <p><a href="https://www.cutimes.com/2018/12/14/trouble-in-housing-looks-more-like-1994-than-2007">https://www.cutimes.com/2018/12/14/trouble-in-housing-looks-more-like-1994-than-2007</a> (details of 1995 housing market)</p>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=394d0fa6-8d34-4e6b-bc06-e0b466e1d18e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-</div>
 </div>
 </div>
 </div>
